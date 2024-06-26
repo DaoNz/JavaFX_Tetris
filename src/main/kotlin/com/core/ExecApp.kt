@@ -1,7 +1,9 @@
 package com.core
 
+import com.core.util.ViewMapper
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
+import javafx.scene.Parent
 import javafx.scene.Scene
 import javafx.scene.layout.AnchorPane
 import javafx.stage.Stage
@@ -9,8 +11,10 @@ import javafx.stage.StageStyle
 
 class ExecApp : Application() {
 
+    val view : ViewMapper = ViewMapper();
+
     override fun start(mainStage: Stage) {
-        val root = FXMLLoader(ExecApp::class.java.getResource("/view/common/MAIN.fxml")).load<AnchorPane>()
+        val root : Parent = FXMLLoader(view.loadView("Main")).load<AnchorPane>()
         val mainScene = Scene(root, 1200.0, 900.0)
 
         // mainStage 설정
