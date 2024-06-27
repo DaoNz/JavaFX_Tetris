@@ -15,14 +15,14 @@ class ExecApp : Application() {
 
     override fun start(mainStage: Stage) {
         val root : Parent = FXMLLoader(view.loadView("Main")).load<AnchorPane>()
-        val mainScene = Scene(root, 1200.0, 900.0)
+        val mainScene = Scene(root, 900.0, 600.0)
 
         // mainStage 설정
         mainStage.initStyle(StageStyle.UNDECORATED)
         mainStage.centerOnScreen()
 
-        mainStage.width     = 1200.0
-        mainStage.height    = 930.0
+        mainStage.width     = 900.0
+        mainStage.height    = 630.0
         mainStage.scene     = mainScene
 
         mainStage.show()
