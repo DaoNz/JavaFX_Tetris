@@ -21,8 +21,8 @@ class MainCtl : Initializable {
     @FXML private lateinit var rect02 : Rectangle
 
     override fun initialize(loc: URL?, res: ResourceBundle?) {
-        pane.minHeight = 600.0;
-        pane.minWidth = 900.0;
+        pane.minHeight = 600.0
+        pane.minWidth = 900.0
         pane.background = Background(BackgroundFill(Color.GREEN, CornerRadii(10.0), Insets(5.0)))
 
         rect01.isVisible = true
